@@ -32,7 +32,7 @@ app.get("/create/db", (req, res) => {
   });
 });
 
-// insert data
+// insert data with email validation
 app.post("/data/create", (req, res) => {
   let email = req.body.email;
   let qry = `SELECT COUNT(*) As cnt FROM user WHERE email ='${email}'`;
